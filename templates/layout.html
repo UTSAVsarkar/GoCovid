@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<title>rPredictor</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+<style>
+body,h1 {font-family: "Raleway", Arial, sans-serif}
+h1 {letter-spacing: 6px}
+.w3-row-padding img {margin-bottom: 12px}
+</style>
+<body>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+<!-- Header -->
+<header class="w3-panel w3-center w3-opacity" style="padding:128px 16px">
+  <h1 class="w3-xlarge">COVID DETECTOR</h1>
+  <h1>GO CORONA GO!!</h1>
+
+    <hr>
+
+    <div class="w3-padding-32">
+    <div class="w3-bar w3-border">
+      <a href="#developer" class="w3-bar-item w3-button">About Us</a>
+      <a href="#predict" class="w3-bar-item w3-button w3-light-grey">Predictor</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact Us</a>
+    </div>
+  </div>
+</header>
+
+  <div id="developer">
+  <h1>About Us</h1>
+    <p>The virus that causes COVID-19 is mainly transmitted through droplets generated when an infected person coughs, sneezes, or exhales. These droplets are too heavy to hang in the air, and quickly fall on floors or surfaces.
+You can be infected by breathing in the virus if you are within close proximity of someone who has COVID-19, or by touching a contaminated surface and then your eyes, nose or mouth.COVID-19 affects different people in different ways. Most infected people will develop mild to moderate illness and recover without hospitalization.
+Most common symptoms:
+fever
+dry cough
+tiredness
+Less common symptoms:
+aches and pains
+sore throat
+diarrhoea
+conjunctivitis
+headache
+loss of taste or smell
+a rash on skin, or discolouration of fingers or toes
+
+      17 June 2020
+
+WHO announced that the hydroxychloroquine (HCQ) arm of the Solidarity Trial to find an effective COVID-19 treatment was being stopped.
+
+The trial's Executive Group and principal investigators made the decision based on evidence from the Solidarity trial, UK's Recovery trial and a Cochrane review of other evidence on hydroxychloroquine.
+
+Data from Solidarity (including the French Discovery trial data) and the recently announced results from the UK's Recovery trial both showed that hydroxychloroquine does not result in the reduction of mortality of hospitalised COVID-19 patients, when compared with standard of care.
+
+Investigators will not randomize further patients to hydroxychloroquine in the Solidarity trial. Patients who have already started hydroxychloroquine but who have not yet finished their course in the trial may complete their course or stop at the discretion of the supervising physician.
+
+This decision applies only to the conduct of the Solidarity trial and does not apply to the use or evaluation of hydroxychloroquine in pre or post-exposure prophylaxis in patients exposed to COVID-19.
+
+    <br>
+
+      This web app will helpful for you, but dataset is not real, as the proper data comes our team will we update this.
+    </p>
+</div>
+
+<div id="predict">
+  <h1>Predictor</h1>
+  <form action="/" method="POST">
+  <div class="container">
+    <label for="fever"><b>Enter fever</b></label>
+    <input type="text" placeholder="in degree" name="fever" id="fever" required>
+
+    <label for="age"><b>Enter age</b></label>
+    <input type="text" placeholder="Age" name="age" id="age" required>
+
+    <div class="container">
+    <label for="pain">Body Pain</label>
+    <select class="custom-select mr-sm-2" id="pain" name="pain">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+    </select>
+  </div>
+
+        <div class="container">
+    <label for="nose">Runny Nose</label>
+    <select class="custom-select mr-sm-2" id="nose" name="nose">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+    </select>
+  </div>
+
+        <div class="container">
+    <label for="breath">Difficulty Breathing</label>
+    <select class="custom-select mr-sm-2" id="breath" name="breath">
+      <option value="-1">Little Difficulty</option>
+      <option value="0">Medium Difficulty</option>
+            <option value="1">Very Difficulty</option>
+    </select>
+  </div>
+
+    <button onclick="fun()">Submit</button>
+  </div>
+</form>
+</div>
+
+<div id="contact" class="container">
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+    <p>Swing by for a cup of coffee, or leave us a message:</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">India</option>
+        </select>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-large">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+</footer>
+</body>
+<script>
+  function fun(){
+  alert("This Prediction was totally made by developer's sample data");
+  }
+</script>
+</html>
